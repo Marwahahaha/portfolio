@@ -4,12 +4,12 @@ export default function BackButton() {
     return (
         <Link
             href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-primary-light rounded-lg hover:bg-primary-light transition-colors text-primary-base font-semibold"
         >
             <svg
                 className="w-4 h-4"
                 fill="none"
-                stroke="white"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
             >
                 <path

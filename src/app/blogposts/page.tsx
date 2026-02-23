@@ -93,24 +93,24 @@ export default function BlogPostsPage() {
     return (
         <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
             <BackButton />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 dark:text-zinc-50">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-darker">
                 Blog posts
             </h1>
             <ul className="max-w-4xl mx-auto space-y-4">
                 {blogPosts.map((post, index) => (
                     <li
                         key={index}
-                        className="border border-zinc-300 dark:border-zinc-700 rounded-lg overflow-hidden bg-white dark:bg-zinc-800 shadow-sm"
+                        className="border border-primary-light rounded-lg overflow-hidden bg-white shadow-sm"
                     >
                         <button
                             onClick={() => togglePost(index)}
-                            className="w-full flex items-center justify-between p-6 hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors"
+                            className="w-full flex items-center justify-between p-6 hover:bg-primary-light transition-colors"
                         >
-                            <h2 className="text-2xl font-semibold dark:text-zinc-50 text-left">
+                            <h2 className="text-2xl font-semibold text-primary-darker text-left">
                                 {post.title}
                             </h2>
                             <svg
-                                className={`w-6 h-6 transition-transform duration-300 ${
+                                className={`w-6 h-6 text-primary-base transition-transform duration-300 ${
                                     expandedPost === index ? "rotate-180" : ""
                                 }`}
                                 fill="none"
@@ -126,7 +126,7 @@ export default function BlogPostsPage() {
                             </svg>
                         </button>
                         {expandedPost === index && (
-                            <div className="p-6 pt-0 border-t border-zinc-200 dark:border-zinc-700">
+                            <div className="p-6 pt-0 border-t border-primary-light">
                                 <BlogPost
                                     title={post.title}
                                     content={post.content}

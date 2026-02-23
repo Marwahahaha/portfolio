@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 dark:text-zinc-50">Marwah Al-Shakhli</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-white-smoke">Marwah Al-Shakhli</h1>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2 relative h-[400px] md:h-[600px]">
           <Image
@@ -21,28 +21,28 @@ export default function Home() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
+                  className="text-primary-base hover:text-white-smoke transition-colors font-semibold">
                   About Me
                 </Link>
               </li>
               <li>
                 <Link
                   href="/blogposts"
-                  className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
+                  className="text-primary-base hover:text-white-smoke transition-colors font-semibold">
                   Blog Posts
                 </Link>
               </li>
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
+                  className="text-primary-base hover:text-white-smoke transition-colors font-semibold">
                   Projects
                 </Link>
               </li>
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
+                  className="text-primary-base hover:text-white-smoke transition-colors font-semibold">
                   Contact
                 </Link>
               </li>
