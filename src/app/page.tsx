@@ -34,7 +34,14 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/projects"
+                  className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
                   className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
                   Contact
                 </Link>
