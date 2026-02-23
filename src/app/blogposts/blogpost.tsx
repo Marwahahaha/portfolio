@@ -16,9 +16,12 @@ export default function BlogPost({ title, content, images }: BlogPost) {
                 {content}
             </p>
             {images && images.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="flex gap-4 overflow-x-auto pb-4 mb-8">
                     {images.map((image, index) => (
-                        <div key={index} className="w-full h-64 bg-gray-200 rounded-lg overflow-hidden">
+                        <div
+                            key={index}
+                            className="flex-shrink-0 w-64 h-48 bg-gray-200 rounded-lg overflow-hidden relative"
+                        >
                             <Image
                                 src={image}
                                 alt={`Blog post image ${index + 1}`}
@@ -29,11 +32,6 @@ export default function BlogPost({ title, content, images }: BlogPost) {
                     ))}
                 </div>
             )}
-            <div className="prose dark:prose-invert max-w-3xl mx-auto">
-                <div dangerouslySetInnerHTML={{__html: content}} />
-
-            </div>
         </div>
     );
-
 }
