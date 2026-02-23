@@ -15,12 +15,20 @@ export default function BlogPostsPage() {
         {
             title: "DeepSeek Uncovered",
             content: "",
-            images: []
+            images: [
+                "/media/deepseek.jpeg",
+                "/media/deepseek-2.jpeg",
+                "/media/deepseek-3.jpeg",
+            ]
         },
         {
             title: "Transitioning to IPv6",
             content: "",
-            images: []
+            images: [
+                "/media/ipv6-transitioning.jpeg",
+                "/media/ipv6-transitioning-2.jpeg",
+                "/media/ipv6-transitioning-3.jpeg",
+            ]
         },
         {
             title: "Hack The Future",
@@ -37,30 +45,45 @@ export default function BlogPostsPage() {
         {
             title: "Flutter: the future of cross-platform developemnt",
             content: "",
-            images: []
+            images: [
+                "/media/flutter.jpg",
+                "/media/flutter-2.jpg",
+                "/media/flutter-3.jpg",
+            ]
         },
         {
             title: "Mob programming session",
             content: "",
-            images: []
+            images: [
+                "/media/mob-programming.jpg",
+            ]
         },
         {
             title: "CTI, From threats to intelligence",
             content: "",
-            images: []
-        },
-        {
-            title: "Event Storming Workshop + OT security talk",
-            content: "We had and eventful day at Howest. In the morning, we had an event storming workshop led by our teachers from the course Domain Driven Design. It's a collaborative technique for modelling complex domains. It brings business and IT people together, helping both sides gain a shared, in-depth understanding of processes.",
             images: [
-                
+                "/media/cti.jpeg",
+                "/media/cti-2.jpeg",
             ]
         },
         {
             title: "The Road to a Defensible IT/OT Architecture",
             content: "",
-            images: []
+            images: [
+                "/media/ot-security.jpg",
+                "/media/ot-security-2.jpg",
+                "/media/ot-security-3.jpg",
+            ]
         },
+        {
+            title: "Event Storming Workshop",
+            content: "We had and eventful day at Howest. In the morning, we had an event storming workshop led by our teachers from the course Domain Driven Design. It's a collaborative technique for modelling complex domains. It brings business and IT people together, helping both sides gain a shared, in-depth understanding of processes.",
+            images: [
+                "/media/event-storming.jpg",
+                "/media/event-storming-2.jpg",
+                "/media/event-storming-3.jpg",
+            ]
+        }
     ];
 
     const togglePost = (index: number) => {
