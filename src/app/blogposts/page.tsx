@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import BlogPost from "./blogpost";
+import BackButton from "../components/BackButton";
 
 export default function BlogPostsPage() {
     const [expandedPost, setExpandedPost] = useState<number | null>(null);
@@ -46,9 +47,9 @@ export default function BlogPostsPage() {
             title: "Flutter: the future of cross-platform developemnt",
             content: "",
             images: [
-                "/media/flutter.jpg",
-                "/media/flutter-2.jpg",
-                "/media/flutter-3.jpg",
+                "/media/flutter.jpeg",
+                "/media/flutter-2.jpeg",
+                "/media/flutter-3.jpeg",
             ]
         },
         {
@@ -71,8 +72,8 @@ export default function BlogPostsPage() {
             content: "",
             images: [
                 "/media/ot-security.jpg",
-                "/media/ot-security-2.jpg",
-                "/media/ot-security-3.jpg",
+                "/media/ot-security-2.jpeg",
+                "/media/ot-security-3.jpeg",
             ]
         },
         {
@@ -91,6 +92,7 @@ export default function BlogPostsPage() {
     };
     return (
         <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
+            <BackButton />
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 dark:text-zinc-50">
                 Blog posts
             </h1>
