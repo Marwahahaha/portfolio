@@ -27,7 +27,7 @@ export default function Home() {
               </li>
               <li>
                 <Link
-                  href="#posts"
+                  href="/blogposts"
                   className="hover:text-gray-600 dark:text-zinc-50 dark:hover:text-gray-400 transition-colors">
                   Blog Posts
                 </Link>
