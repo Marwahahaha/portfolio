@@ -9,7 +9,7 @@ interface BlogPost {
 export default function BlogPost({ title, content, images }: BlogPost) {
     return (
         <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 dark:text-zinc-50">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 dark:text-primary-dark">
                 {title}
             </h1>
             <p className="text-xl text-center text-zinc-600 dark:text-zinc-400 mb-8">
@@ -20,7 +20,7 @@ export default function BlogPost({ title, content, images }: BlogPost) {
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 w-64 h-48 bg-gray-200 rounded-lg overflow-hidden relative"
+                            className="shrink-0 w-64 h-48 bg-gray-200 rounded-lg overflow-hidden relative"
                         >
                             <Image
                                 src={image}
