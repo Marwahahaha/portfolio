@@ -6,13 +6,17 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-dark: #708238;
+  --color-primary-base: #568203;
+  --color-primary-light: #A8C090;
+  --color-primary-darker: #487800;
+  --color-white-smoke: #F5F5F5;
+
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;

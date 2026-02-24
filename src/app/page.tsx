@@ -4,9 +4,9 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-white-smoke">Marwah Al-Shakhli</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-base">Marwah Al-Shakhli</h1>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
-        <div className="w-full md:w-1/2 relative h-[400px] md:h-[600px]">
+        <div className="w-full md:w-1/2 relative h-100 md:h-150">
           <Image
             src="/profile-image.png"
             alt="Profile Image"
