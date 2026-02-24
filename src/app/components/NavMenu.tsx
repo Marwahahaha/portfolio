@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavMenu() {
     return (
         <nav className="mb-8">
-            <ul className="flex flex-wrap items-center justify-center gap-6 text-lg">
+            <ul className="flex flex-wrap items-center justify-center gap-6 text-lg border border-primary-light rounded-lg bg-white shadow-sm p-4">
                 <li>
                     <Link
                         href="/"

@@ -94,7 +94,6 @@ export default function BlogPostsPage() {
     return (
         <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
             <NavMenu />
-            <BackButton />
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-darker">
                 Blog posts
             </h1>
