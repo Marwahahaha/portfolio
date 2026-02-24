@@ -10,6 +10,7 @@ export default function Contact() {
             </h1>
             <div className="max-w-6xl mx-auto border border-primary-light rounded-lg bg-white shadow-sm p-6 md:p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* Left Column - Intro + Links */}
                     <div className="space-y-6">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary-darker">
@@ -27,10 +28,10 @@ export default function Contact() {
                             {/* Email */}
                             <div className="flex items-center gap-4 p-4 border border-primary-light rounded-lg hover:bg-gray-50 transition-colors">
                                 <div className="text-primary-base">
-                                    <Image 
-                                        src="/media/svg/email-icon.svg" 
-                                        alt="Email" 
-                                        width={32} 
+                                    <Image
+                                        src="/media/svg/email-icon.svg"
+                                        alt="Email"
+                                        width={32}
                                         height={32}
                                         className="w-8 h-8"
                                     />
@@ -43,7 +44,7 @@ export default function Contact() {
                                         href="mailto:your.email@example.com"
                                         className="text-primary-base hover:underline"
                                     >
-                                        your.email@example.com
+                                        marwah20alshakhli@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -51,10 +52,10 @@ export default function Contact() {
                             {/* LinkedIn */}
                             <div className="flex items-center gap-4 p-4 border border-primary-light rounded-lg hover:bg-gray-50 transition-colors">
                                 <div className="text-primary-base">
-                                    <Image 
-                                        src="/media/svg/linkedin-icon.svg" 
-                                        alt="LinkedIn" 
-                                        width={32} 
+                                    <Image
+                                        src="/media/svg/linkedin-icon.svg"
+                                        alt="LinkedIn"
+                                        width={32}
                                         height={32}
                                         className="w-8 h-8"
                                     />
@@ -74,82 +75,83 @@ export default function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <form className="space-y-4">
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <label
-                                            htmlFor="firstName"
-                                            className="block text-sm font-semibold text-primary-darker mb-2"
-                                        >
-                                            First Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="firstName"
-                                            name="firstName"
-                                            required
-                                            className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label
-                                            htmlFor="lastName"
-                                            className="block text-sm font-semibold text-primary-darker mb-2"
-                                        >
-                                            Last Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="lastName"
-                                            name="lastName"
-                                            required
-                                            className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
-                                        />
-                                    </div>
-                                </div>
+                    </div>
 
+                    {/* Right Column - Form */}
+                    <div>
+                        <form className="space-y-4">
+                            <div className="grid grid-cols-2 gap-4">
                                 <div>
                                     <label
-                                        htmlFor="email"
+                                        htmlFor="firstName"
                                         className="block text-sm font-semibold text-primary-darker mb-2"
                                     >
-                                        Email
+                                        First Name
                                     </label>
                                     <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
                                         required
                                         className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
                                     />
                                 </div>
-
                                 <div>
                                     <label
-                                        htmlFor="message"
+                                        htmlFor="lastName"
                                         className="block text-sm font-semibold text-primary-darker mb-2"
                                     >
-                                        Message
+                                        Last Name
                                     </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows={6}
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
                                         required
-                                        className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base resize-none"
-                                    >
-                                    </textarea>
+                                        className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
+                                    />
                                 </div>
+                            </div>
 
-                                <button
-                                    type="submit"
-                                    className="w-full bg-primary-base text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-darker transition-colors"
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-semibold text-primary-darker mb-2"
                                 >
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="message"
+                                    className="block text-sm font-semibold text-primary-darker mb-2"
+                                >
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows={6}
+                                    required
+                                    className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base resize-none"
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="w-full bg-primary-base text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-darker transition-colors"
+                            >
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
