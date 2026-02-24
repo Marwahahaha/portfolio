@@ -7,7 +7,7 @@ export default function NavMenu() {
                 <li>
                     <Link
                         href="/"
-                        className="text-primary-base hover:text-white-smoke transition-colors font-semibold"
+                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
                     >
                         Home
                     </Link>
@@ -15,7 +15,7 @@ export default function NavMenu() {
                 <li>
                     <Link
                         href="/about"
-                        className="text-primary-base hover:text-white-smoke transition-colors font-semibold"
+                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
                     >
                         About Me
                     </Link>
@@ -23,7 +23,7 @@ export default function NavMenu() {
                 <li>
                     <Link
                         href="/blogposts"
-                        className="text-primary-base hover:text-white-smoke transition-colors font-semibold"
+                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
                     >
                         Blog Posts
                     </Link>
@@ -31,7 +31,7 @@ export default function NavMenu() {
                 <li>
                     <Link
                         href="/projects"
-                        className="text-primary-base hover:text-white-smoke transition-colors font-semibold"
+                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
                     >
                         Projects
                     </Link>
@@ -39,7 +39,7 @@ export default function NavMenu() {
                 <li>
                     <Link
                         href="/contact"
-                        className="text-primary-base hover:text-white-smoke transition-colors font-semibold"
+                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
                     >
                         Contact
                     </Link>
