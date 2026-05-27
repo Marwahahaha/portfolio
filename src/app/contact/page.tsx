@@ -1,161 +1,138 @@
-import BackButton from "../components/BackButton";
-import Image from "next/image";
-import NavMenu from "../components/NavMenu";
+"use client";
 
-export default function Contact() {
+import { useForm } from "@formspree/react";
+import PageShell from "../components/PageShell";
+import SectionHeader from "../components/SectionHeader";
+
+export default function ContactPage() {
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "";
+    const [state, handleSubmit] = useForm(formId);
+
     return (
-        <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-            <NavMenu />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-darker">
-                Get in Touch
-            </h1>
-            <div className="max-w-6xl mx-auto border border-primary-light rounded-lg bg-white shadow-sm p-6 md:p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Left Column - Intro + Links */}
-                    <div className="space-y-6">
-                        <div>
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary-darker">
-                                Let's Connect
-                            </h2>
-                            <p className="text-lg text-primary-dark mb-6">
-                                Feel free to reach out to me via email or
-                                connect with me I'm always open to discussing
-                                new projects, opportunities, or just having a
-                                chat!
-                            </p>
-                        </div>
+        <PageShell>
+            <SectionHeader
+                eyebrow="Contact"
+                title="Let’s connect."
+                description="Send me a message about opportunities, projects, collaborations, or anything you would like to discuss."
+            />
+            <section className="bg-card mx-auto grid max-w-6xl gap-8 rounded-[2rem] p-7 shadow-sm lg:grid-cols-[0.8fr_1.2fr]">
+                <aside className="rounded-[1.5rem] bg-soft-pink p-7">
+                    <h2 className="text-heading text-2xl font-black">
+                        Contact details
+                    </h2>
+                    <p className="text-muted mt-4 leading-7">
+                        I am always happy to connect, especially about software
+                        development, learning opportunities, and creative
+                        projects.
+                    </p>
 
-                        <div className="space-y-4">
-                            {/* Email */}
-                            <div className="flex items-center gap-4 p-4 border border-primary-light rounded-lg hover:bg-gray-50 transition-colors">
-                                <div className="text-primary-base">
-                                    <Image
-                                        src="/media/svg/email-icon.svg"
-                                        alt="Email"
-                                        width={32}
-                                        height={32}
-                                        className="w-8 h-8"
-                                    />
-                                </div>
-                                <div>
-                                    <p className="font-semibold text-primary-darker">
-                                        Email
-                                    </p>
-                                    <a
-                                        href="mailto:your.email@example.com"
-                                        className="text-primary-base hover:underline"
-                                    >
-                                        marwah20alshakhli@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-
-                            {/* LinkedIn */}
-                            <div className="flex items-center gap-4 p-4 border border-primary-light rounded-lg hover:bg-gray-50 transition-colors">
-                                <div className="text-primary-base">
-                                    <Image
-                                        src="/media/svg/linkedin-icon.svg"
-                                        alt="LinkedIn"
-                                        width={32}
-                                        height={32}
-                                        className="w-8 h-8"
-                                    />
-                                </div>
-                                <div>
-                                    <p className="font-semibold text-primary-darker">
-                                        LinkedIn
-                                    </p>
-                                    <a
-                                        href="https://www.linkedin.com/in/marwah-al-shakhli-094566360/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-primary-base hover:underline"
-                                    >
-                                        Marwah Al-Shakhli
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column - Form */}
-                    <div>
-                        <form className="space-y-4">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label
-                                        htmlFor="firstName"
-                                        className="block text-sm font-semibold text-primary-darker mb-2"
-                                    >
-                                        First Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="firstName"
-                                        name="firstName"
-                                        required
-                                        className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
-                                    />
-                                </div>
-                                <div>
-                                    <label
-                                        htmlFor="lastName"
-                                        className="block text-sm font-semibold text-primary-darker mb-2"
-                                    >
-                                        Last Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="lastName"
-                                        name="lastName"
-                                        required
-                                        className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
-                                    />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block text-sm font-semibold text-primary-darker mb-2"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                    className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base"
-                                />
-                            </div>
-
-                            <div>
-                                <label
-                                    htmlFor="message"
-                                    className="block text-sm font-semibold text-primary-darker mb-2"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={6}
-                                    required
-                                    className="w-full px-4 py-2 border border-primary-light rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-base resize-none"
-                                ></textarea>
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-primary-base text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-darker transition-colors"
+                    <div className="text-body mt-6 space-y-4">
+                        <p>
+                            <span className="font-bold">Email:</span>{" "}
+                            <a
+                                className="text-accent underline"
+                                href="mailto:marwah.al-shakhli@student.howest.be"
                             >
-                                Send Message
-                            </button>
-                        </form>
+                                Marwah Al-Shakhli
+                            </a>
+                        </p>
+                        <p>
+                            <span className="font-bold">LinkedIn:</span>{" "}
+                            <a
+                                className="text-accent underline"
+                                href="https://www.linkedin.com/in/marwah-al-shakhli-094566360/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Marwah Al-Shakhli
+                            </a>
+                        </p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </aside>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid gap-5 md:grid-cols-2">
+                        <div>
+                            <label
+                                htmlFor="firstName"
+                                className="text-heading mb-2 block font-bold"
+                            >
+                                First name
+                            </label>
+                            <input
+                                id="firstName"
+                                name="firstName"
+                                required
+                                className="form-field"
+                            />
+                        </div>
+                        <div>
+                            <label
+                                htmlFor="lastName"
+                                className="text-heading mb-2 block font-bold"
+                            >
+                                Last name
+                            </label>
+                            <input
+                                id="lastName"
+                                name="lastName"
+                                required
+                                className="form-field"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            htmlFor="email"
+                            className="text-heading mb-2 block font-bold"
+                        >
+                            Email
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            className="form-field"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="message"
+                            className="text-heading mb-2 block font-bold"
+                        >
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows={6}
+                            required
+                            className="form-field resize-none"
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        disabled={state.submitting}
+                        className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60"
+                    >
+                        {state.submitting ? "Sending..." : "Send message"}
+                    </button>
+
+                    {state.succeeded && (
+                        <p className="font-semibold text-emerald-700">
+                            Your message has been sent.
+                        </p>
+                    )}
+                    {state.errors && (
+                        <p className="font-semibold text-red-600">
+                            Something went wrong. Please try again later.
+                        </p>
+                    )}
+                </form>
+            </section>
+        </PageShell>
     );
 }

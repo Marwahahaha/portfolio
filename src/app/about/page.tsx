@@ -1,50 +1,80 @@
-import BackButton from "../components/BackButton";
-import NavMenu from "../components/NavMenu";
+import PageShell from "../components/PageShell";
+import SectionHeader from "../components/SectionHeader";
 
-export default function About() {
+const skills = [
+    "Java",
+    "C#",
+    "JavaScript",
+    "React",
+    "Symfony",
+    "System design",
+    "Problem solving",
+];
+
+export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-            <NavMenu />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-darker">
-                About Me
-            </h1>
-            <div className="max-w-4xl mx-auto border border-primary-light rounded-lg bg-white shadow-sm p-6 md:p-8">
-                <div className="space-y-4 text-lg text-primary-dark">
+        <PageShell>
+            <SectionHeader
+                eyebrow="About me"
+                title="A developer with a creative maker mindset."
+                description="I enjoy learning deeply, building useful things, and combining technical thinking with creativity."
+            />
+
+            <section className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.8fr]">
+                <article className="bg-card rounded-[2rem] p-8 leading-8 shadow-sm">
                     <p>
-                        Hi! My name is Marwah and I'm a software engineering student
-                        at HOWEST in Bruges. I'm 25 years old and I'm passionate about many things. My
-                        interests range from programming to sewing and fashion and
-                        everything in-between. I love learning new things and being able to do something on
-                        my own with my own skills. I also love to share my knowledge
-                        with others and help them learn new things as well.
+                        Hi! My name is Marwah and I am a software engineering
+                        student at HOWEST in Bruges. I am passionate about
+                        programming, sewing, fashion, gaming, and learning new
+                        skills. I enjoy the feeling of creating something
+                        independently, whether that is a software project or a
+                        handmade garment.
                     </p>
-                    <p>
-                        As a software engineering student, I have a strong
-                        foundation in problem solving, programming and software
-                        development as well as system design and architecture. I have experience with a variety of programming languages
-                        and frameworks, including Java, CSharp, JavaScript, React
-                        and Laravel. I'm always looking for new opportunities to learn and grow
-                        as a developer, and I'm excited to see where my career will
-                        take me in the future.
+                    <p className="mt-5">
+                        As a software engineering student, I am building a
+                        strong foundation in problem solving, programming,
+                        software development, system design, and architecture. I
+                        have experience with several languages and frameworks,
+                        including Java, C#, JavaScript, React, and Symfony.
                     </p>
-                    <p>
-                        I have tons of hobbies and interests, so there are no dull
-                        moments in my life. I love gaming! It goes from JRPGs, to
-                        strategy games, to simulation games and everything in
-                        between. As long as it's not esports or fps, I'm in! I also love to sew and create my own clothes. I find it very
-                        rewarding to be able to create something with my own hands
-                        and wear it afterwards. Aside from daily wear, I create costumes for cosplay as
-                        well. I love to go to conventions and meet other people who
-                        share the same interests as me. I'm currently learning how to crochet and do embroidery as
-                        well, and I'm loving it! Last but not least, I spend my commuting time doing
-                        Kumihimo, which I find very relaxing and a great way to
-                        unwind after a long day.
+                    <p className="mt-5">
+                        Outside of programming, I love gaming, sewing clothes,
+                        making cosplay costumes, and going to conventions. I am
+                        also learning crochet and embroidery, and I use my
+                        commute time for kumihimo because it helps me relax and
+                        unwind.
                     </p>
-                    <p>
-                        If you'd like to know more about me, feel free to reach out! I'm always happy to chat and connect with new people.
-                    </p>
-                </div>
-            </div>
-        </div>
+                </article>
+                <aside className="space-y-6">
+                    <div className="rounded-[2rem] bg-soft-pink p-7 shadow-sm">
+                        <h2 className="text-heading text-2xl font-black">
+                            Tech stack
+                        </h2>
+                        <div className="mt-5 flex flex-wrap gap-3">
+                            {skills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className="rounded-full bg-white px-4 py-2 text-sm font-bold text-accent shadow-sm"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="rounded-[2rem] bg-soft-green p-7 shadow-sm">
+                        <h2 className="text-heading text-2xl font-black">
+                            What I value
+                        </h2>
+                        <ul className="text-body mt-4 space-y-3">
+                            <li>🌱 Continuous learning</li>
+                            <li>🤝 Sharing knowledge</li>
+                            <li>🧠 Clear problem solving</li>
+                            <li>🎨 Creativity in technical work</li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+        </PageShell>
     );
 }

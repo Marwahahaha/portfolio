@@ -1,14 +1,39 @@
-import BackButton from "../components/BackButton";
-import NavMenu from "../components/NavMenu";
+import PageShell from "../components/PageShell";
+import ProjectCard from "../components/ProjectCard";
+import SectionHeader from "../components/SectionHeader";
+import { projects } from "../data/projects";
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen bg-custom-bg font-sans p-8 md:p-12 lg:p-16">
-            <NavMenu />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold mb-8 text-primary-darker">Projects</h1>
-            <p className="text-xl text-center text-primary-dark mb-8">
-                Here you can find some of the projects I've worked on. I'm passionate about software development and always eager to take on new challenges. Feel free to explore my projects and reach out if you have any questions or would like to collaborate!
-            </p>
-        </div>
+        <PageShell>
+            <SectionHeader
+                eyebrow="Projects"
+                title="Software projects and experiments."
+                description="A selection of projects that show my technical growth, problem-solving process, and experience with different tools."
+            />
+
+            <section className="mx-auto max-w-6xl">
+                <div className="mb-8 rounded-[2rem] bg-stone-900 p-7 text-white shadow-sm">
+                    <h2 className="text-2xl font-black">GitHub profile</h2>
+                    <p className="mt-3 text-stone-200">
+                        You can find more of my code and experiments on GitHub.
+                    </p>
+                    <a
+                        href="https://github.com/your-username"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex rounded-full bg-white px-5 py-3 font-bold text-stone-900 transition hover:bg-[var(--portfolio-pink-light)]"
+                    >
+                        Visit my GitHub
+                    </a>
+                </div>
+
+                <div className="grid gap-6 md:grid-cols-2">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.title} {...project} />
+                    ))}
+                </div>
+            </section>
+        </PageShell>
     );
 }
