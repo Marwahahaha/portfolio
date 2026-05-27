@@ -1,50 +1,31 @@
 import Link from "next/link";
 
+const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/hobbies", label: "Hobbies" },
+    { href: "/blogposts", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+];
+
 export default function NavMenu() {
     return (
-        <nav className="mb-8">
-            <ul className="flex flex-wrap items-center justify-center gap-6 text-lg border border-primary-light rounded-lg bg-white shadow-sm p-4">
-                <li>
-                    <Link
-                        href="/"
-                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
-                    >
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/about"
-                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
-                    >
-                        About Me
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/blogposts"
-                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
-                    >
-                        Blog Posts
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/projects"
-                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
-                    >
-                        Projects
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/contact"
-                        className="text-primary-base hover:text-navbar-background transition-colors font-semibold"
-                    >
-                        Contact
-                    </Link>
-                </li>
-            </ul>
-        </nav>
+        <header className="sticky top-4 z-50 mx-auto mb-10 max-w-6xl px-4">
+            <nav className="rounded-full border border-accent-soft bg-white/80 px-5 py-3 shadow-sm backdrop-blur-md">
+                <ul className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-body md:gap-6">
+                    {navItems.map((item) => (
+                        <li key={item.href}>
+                            <Link
+                                href={item.href}
+                                className="rounded-full px-3 py-2 transition hover:bg-soft-pink hover:text-accent"
+                            >
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </header>
     );
 }
