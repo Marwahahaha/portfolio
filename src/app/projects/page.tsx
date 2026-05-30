@@ -13,7 +13,7 @@ export default function ProjectsPage() {
             />
 
             <section className="mx-auto max-w-6xl">
-                <div className="mb-8 rounded-[2rem] bg-stone-900 p-7 text-white shadow-sm">
+                <div className="mb-8 rounded-4xl bg-stone-900 p-7 text-white shadow-sm">
                     <h2 className="text-2xl font-black">GitHub profile</h2>
                     <p className="mt-3 text-stone-200">
                         You can find more of my code and experiments on GitHub.

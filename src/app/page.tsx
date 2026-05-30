@@ -49,7 +49,7 @@ export default function Home() {
         <div className="order-1 lg:order-2">
           <div className="relative mx-auto aspect-4/5 max-w-sm overflow-hidden rounded-4xl border-8 border-white bg-soft-pink shadow-2xl">
             <Image
-              src="/profile-image.png"
+              src="/profile_image.png"
               alt="Portrait of Marwah Al-Shakhli"
               fill
               priority
