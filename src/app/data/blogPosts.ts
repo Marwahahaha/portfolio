@@ -15,7 +15,11 @@ export const blogPosts = [
         content:
             "I attended a Tech & Meet session titled “The 5 Levels of Infrastructure as Code”. The session was given by Dimitri and Tim from Orbit. It focused on how organisations can evolve from manually creating cloud resources to a more structured, reusable, automated, and governed way of managing infrastructure.\n\nThe target audience was mainly students, developers, DevOps engineers, cloud engineers, and anyone interested in cloud infrastructure. The session was technical, but also very practical. It did not only explain what Infrastructure as Code is, but also showed why organisations need it when their environments become larger and more complex.\n\nThe talk was structured around five levels of Infrastructure as Code. I liked this structure because it made the topic easier to follow. Instead of presenting IaC as one big concept, the speakers showed it as a maturity path. Each level solves certain problems, but also introduces new responsibilities.\n\nThe first level was manual infrastructure, sometimes called ClickOps. This is when resources are created manually through a cloud portal, such as the Azure Portal. Tools like Azure Lighthouse can help manage environments, but the process still depends heavily on human actions.\n\nManual work can be useful when experimenting or learning, but it quickly becomes risky in professional environments. It is easy to forget a setting, click the wrong option, or create resources differently across environments. It also makes it difficult to know exactly what was changed and why.\n\nThe second level was scripted infrastructure. In this approach, resources are created using scripts, for example by creating a storage account through PowerShell. This already improves the situation because scripts are reusable, faster to execute, and reduce some human error.\n\nThe speakers also mentioned that scripted deployments can work well with tools such as Azure DevOps. This makes scripts useful for automation and repeated deployments. However, scripts are usually imperative. They describe the steps that need to happen, rather than the final desired state.\n\nThat creates some disadvantages. If a resource already exists, the script needs to handle that situation manually. Over time, scripts can become complex and difficult to maintain. Idempotency, meaning the ability to run the same process multiple times with the same result, often has to be managed by the developer.\n\nThe third level was declarative Infrastructure as Code. This was one of the most important parts of the session for me. The idea is to describe the desired outcome, not the process. Instead of writing every step, you define what the infrastructure should look like, and the tool figures out how to reach that state.\n\nDeclarative IaC solves many practical problems. It helps with creating sandbox environments, reducing configuration drift, applying default best practices, controlling unexpected costs, improving audit and governance, and making infrastructure easier to read and understand.\n\nThe speakers mentioned tools such as Azure Bicep, Ansible, and HashiCorp Terraform. These tools make it possible to define infrastructure in code, store it in version control, review changes, and deploy resources in a more predictable way.\n\nThe fourth level was modular and reusable Infrastructure as Code. The key idea here was “build once, deploy everywhere”. Instead of writing the same definitions again and again, teams can create reusable modules. These modules can then be used across different projects, environments, or teams.\n\nI found this level very relevant because it connects to what we learn in software development. In programming, we try to avoid repetition and create reusable components. The same principle applies to infrastructure. If a team needs the same kind of resource multiple times, it makes sense to define it once and reuse it safely.\n\nThe fifth level was continuous and governed infrastructure. This level focuses on controlling how resources are deployed and managed over time. It includes built-in governance, cost control, security, compliance, and standardisation.\n\nThis part showed that Infrastructure as Code is not only about deploying resources faster. It is also about creating rules and guardrails. In a professional environment, teams need to make sure that infrastructure follows security requirements, naming conventions, cost limits, and compliance rules.\n\nCI/CD was also an important part of the session. The speakers explained why CI/CD matters for infrastructure: it creates consistency between environments, enables faster deployment, reduces human error, adds built-in validation and testing, supports version control and traceability, and makes rollback easier.\n\nThis topic connects strongly to my education because we often build applications, but applications also need infrastructure to run on. It is not enough to know how to write code. Developers should also understand how applications are deployed, how environments are created, and how infrastructure choices affect reliability and maintainability.\n\nI learned that Infrastructure as Code is not just a DevOps buzzword. It is a way to make infrastructure more predictable, repeatable, and professional. The five levels helped me understand that teams do not become mature immediately. They often start manually, then move to scripts, then declarative definitions, then reusable modules, and finally governed continuous delivery.\n\nA possible improvement for the session would be to include a small live demo that compares the same deployment in different levels. For example, creating a resource manually, then with PowerShell, and then with Terraform or Bicep. That would make the differences even more concrete.\n\nI would like to learn more about Infrastructure as Code in the future, especially Terraform and Azure Bicep. I think it is useful for developers to understand these tools, even if they do not become full-time cloud engineers. It helps bridge the gap between development and operations.\n\nI would attend a similar talk again, especially if it included hands-on exercises or a real project example. I would also recommend this session to other students who are interested in cloud development, DevOps, or software architecture. The main lesson I took away is that good infrastructure should be versioned, repeatable, secure, and governed, just like good software.",
         tags: ["Infrastructure as Code", "DevOps", "Cloud", "CI/CD"],
-        images: [],
+        images: [
+            "/media/IaC.jpeg",
+            "/media/IaC-2.jpeg",
+            "/media/IaC-3.jpeg",
+        ],
     },
     {
         title: "How to Prepare for the Quantum Future",
@@ -28,7 +32,11 @@ export const blogPosts = [
             "Cybersecurity",
             "Cryptography",
         ],
-        images: [],
+        images: [
+            "/media/quantum-computing-3.jpeg",
+            "/media/quantum-computing-2.jpeg",
+            "/media/quantum-computing.jpeg",
+        ],
     },
     {
         title: "Van Plato tot Vibe Coding",
@@ -41,7 +49,12 @@ export const blogPosts = [
             "Vibe coding",
             "Computing history",
         ],
-        images: [],
+        images: [
+            "/media/van-plato-tot-vibe-coding.jpeg",
+            "/media/van-plato-tot-vibe-coding-2.jpeg",
+            "/media/van-plato-tot-vibe-coding-3.jpeg",
+            "/media/van-plato-tot-vibe-coding-4.jpeg",
+        ],
     },
     {
         title: "DeepSeek Uncovered",
@@ -90,7 +103,7 @@ export const blogPosts = [
         images: [
             "/media/flutter.jpeg",
             "/media/flutter-2.jpeg",
-            "/media/flutter-3.jpeg",
+            "/media/flutter-3.jpg",
         ],
     },
     {

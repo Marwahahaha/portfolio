@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                         href="https://github.com/your-username"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-5 inline-flex rounded-full bg-white px-5 py-3 font-bold text-stone-900 transition hover:bg-[var(--portfolio-pink-light)]"
+                        className="mt-5 inline-flex rounded-full bg-white px-5 py-3 font-bold text-stone-900 transition hover:bg-(--portfolio-pink-light)"
                     >
                         Visit my GitHub
                     </a>
