@@ -3,12 +3,13 @@ import SectionHeader from "../components/SectionHeader";
 
 const skills = [
     "Java",
-    "C#",
-    "JavaScript",
-    "React",
+    ".NET",
+    "JS/TS",
+    "React/Vue",
     "Symfony",
     "System design",
     "Problem solving",
+    "Software architecture",
 ];
 
 export default function AboutPage() {
@@ -21,7 +22,7 @@ export default function AboutPage() {
             />
 
             <section className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.8fr]">
-                <article className="bg-card rounded-[2rem] p-8 leading-8 shadow-sm">
+                <article className="bg-card rounded-4xl p-8 leading-8 shadow-sm">
                     <p>
                         Hi! My name is Marwah and I am a software engineering
                         student at HOWEST in Bruges. I am passionate about
@@ -35,7 +36,7 @@ export default function AboutPage() {
                         strong foundation in problem solving, programming,
                         software development, system design, and architecture. I
                         have experience with several languages and frameworks,
-                        including Java, C#, JavaScript, React, and Symfony.
+                        including Java, .NET, JS/TS, React/Vue, and Symfony.
                     </p>
                     <p className="mt-5">
                         Outside of programming, I love gaming, sewing clothes,
@@ -46,7 +47,7 @@ export default function AboutPage() {
                     </p>
                 </article>
                 <aside className="space-y-6">
-                    <div className="rounded-[2rem] bg-soft-pink p-7 shadow-sm">
+                    <div className="rounded-4xl bg-soft-pink p-7 shadow-sm">
                         <h2 className="text-heading text-2xl font-black">
                             Tech stack
                         </h2>
@@ -62,7 +63,7 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    <div className="rounded-[2rem] bg-soft-green p-7 shadow-sm">
+                    <div className="rounded-4xl bg-soft-green p-7 shadow-sm">
                         <h2 className="text-heading text-2xl font-black">
                             What I value
                         </h2>

@@ -45,7 +45,7 @@ export const sewingProjects = [
     {
         title: "Craft experiments",
         description:
-            "Crochet, embroidery, kumihimo, and other handmade techniques I am currently learning.",
+            "Embroidery, kumihimo, lanyard bracelets and other handmade techniques I am currently learning.",
         images: [
             "/media/kumihimo.jpeg",
             "/media/lanyard-bracelets.jpeg",

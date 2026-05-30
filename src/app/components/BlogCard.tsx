@@ -49,7 +49,7 @@ export default function BlogCard({
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="card-hover bg-card w-full rounded-[2rem] border border-accent-soft p-7 text-left shadow-sm"
+        className="card-hover bg-card w-full rounded-4xl border border-accent-soft p-7 text-left shadow-sm"
       >
         <div className="mb-5 flex items-center justify-between gap-4">
           <span className="rounded-full bg-soft-pink px-4 py-2 text-sm font-bold text-accent">
@@ -87,14 +87,14 @@ export default function BlogCard({
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-stone-950/60 px-4 py-8 backdrop-blur-sm"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-stone-950/60 px-4 py-8 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-labelledby={`blog-modal-${title}`}
           onClick={() => setIsOpen(false)}
         >
           <article
-            className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-[2rem] bg-white p-6 shadow-2xl md:p-8"
+            className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-4xl bg-white p-6 shadow-2xl md:p-8"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-6 flex items-start justify-between gap-4">
@@ -113,7 +113,7 @@ export default function BlogCard({
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-[var(--portfolio-border)]"
+                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-(--portfolio-border)"
                 aria-label="Close blog post"
               >
                 ×
@@ -149,7 +149,7 @@ export default function BlogCard({
                       key={image}
                       type="button"
                       onClick={() => setSelectedImage(image)}
-                      className="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-soft-pink"
+                      className="group relative aspect-4/3 overflow-hidden rounded-3xl bg-soft-pink"
                       aria-label={`Open ${title} image ${index + 1}`}
                     >
                       <Image
@@ -169,7 +169,7 @@ export default function BlogCard({
 
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[120] flex items-center justify-center bg-stone-950/80 px-4 py-8 backdrop-blur-sm"
+          className="fixed inset-0 z-120 flex items-center justify-center bg-stone-950/80 px-4 py-8 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           onClick={() => setSelectedImage(null)}

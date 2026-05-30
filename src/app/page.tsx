@@ -4,7 +4,7 @@ import PageShell from "./components/PageShell";
 
 const highlights = [
   "Software engineering student",
-  "React, JavaScript, Java, C# & Symfony",
+  "Java, Symfony, .NET, React/Vue and JS/TS",
   "Creative maker: sewing, cosplay & crafts",
 ];
 
@@ -77,7 +77,7 @@ export default function Home() {
             Creative hobbies
           </h2>
           <p className="text-muted mt-2">
-            Gaming, sewing, cosplay, crochet, embroidery, and kumihimo.
+            Gaming, sewing, cosplay, embroidery, and kumihimo.
           </p>
         </Link>
         <Link
