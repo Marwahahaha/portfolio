@@ -116,7 +116,7 @@ export default function BlogCard({
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-[var(--portfolio-border)]"
+                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-(--portfolio-border)"
                 aria-label="Close blog post"
               >
                 ×

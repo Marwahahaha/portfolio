@@ -8,7 +8,7 @@ import { blogPosts, type BlogCategory } from "../data/blogPosts";
 
 type BlogFilter = "All" | BlogCategory;
 
-const filters: BlogFilter[] = ["All", "Tech & meets", "Workshops", "More"];
+const filters: BlogFilter[] = ["All", "Tech & meet", "Workshops", "More"];
 
 export default function BlogPostsPage() {
   const [activeFilter, setActiveFilter] = useState<BlogFilter>("All");
