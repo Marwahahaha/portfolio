@@ -82,11 +82,12 @@ export const projects: Project[] = [
       "Mock-up",
     ],
     images: [
-      "media/opdracht-2-voorstudie.jpg",
-      "media/opdracht-2-voorstudie-1.jpg",
-      "media/opdracht-2-voorstudie-2.jpg",
-      "media/opdracht-2-gekleefd.jpg",
-      "media/poster-artwork-in-a-modern-loft-mockUp.jpg",
+      "/media/opdracht-2-voorstudie.jpg",
+      "/media/opdracht-2-voorstudie-1.jpg",
+      "/media/opdracht-2-voorstudie-2.jpg",
+      "/media/opdracht-2-gekleefd.jpg",
+      "/media/poster-artwork-in-a-modern-loft-mockUp.jpg",
+
     ],
   },
   {
@@ -104,13 +105,13 @@ export const projects: Project[] = [
       "Mock-up",
     ],
     images: [
-      "media/letter-logo-1.png",
-      "media/letter-logo-2.png",
-      "media/letter-logo-3.png",
-      "media/letter-logo-4.png",
-      "media/letter-logo-5.png",
-      "media/letter-logo-6.png",
-      "media/hoodie-mockUp.jpg",
+      "/media/letter-logo-1.png",
+      "/media/letter-logo-2.png",
+      "/media/letter-logo-3.png",
+      "/media/letter-logo-4.png",
+      "/media/letter-logo-5.png",
+      "/media/letter-logo-6.png",
+      "/media/hoodie-mockUp.jpg",
     ],
   },
   {
