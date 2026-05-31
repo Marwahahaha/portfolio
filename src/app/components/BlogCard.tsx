@@ -10,6 +10,7 @@ interface BlogCardProps {
   content: string;
   images?: string[];
   tags?: string[];
+  spotifyEmbedUrl?: string;
 }
 
 export default function BlogCard({
@@ -18,6 +19,7 @@ export default function BlogCard({
   content,
   images = [],
   tags = [],
+  spotifyEmbedUrl,
 }: BlogCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -65,7 +67,7 @@ export default function BlogCard({
 
         <h2 className="text-heading text-2xl font-black">{title}</h2>
 
-        <p className="text-muted mt-4 line-clamp-4 leading-7">
+        <p className="text-muted mt-4 line-clamp-3 leading-7">
           {content || "Reflection coming soon."}
         </p>
 
@@ -102,6 +104,7 @@ export default function BlogCard({
                 <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-accent">
                   {category}
                 </p>
+
                 <h2
                   id={`blog-modal-${title}`}
                   className="text-heading text-3xl font-black md:text-4xl"
@@ -113,7 +116,7 @@ export default function BlogCard({
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-(--portfolio-border)"
+                className="rounded-full bg-soft-pink px-4 py-2 font-black text-accent transition hover:bg-[var(--portfolio-border)]"
                 aria-label="Close blog post"
               >
                 ×
@@ -123,6 +126,23 @@ export default function BlogCard({
             <p className="text-body whitespace-pre-line leading-8">
               {content || "Reflection coming soon."}
             </p>
+
+            {spotifyEmbedUrl && (
+              <div className="mt-8">
+                <h3 className="text-heading mb-4 text-xl font-black">
+                  Listen to the episode
+                </h3>
+
+                <iframe
+                  src={spotifyEmbedUrl}
+                  width="100%"
+                  height="232"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-3xl"
+                />
+              </div>
+            )}
 
             {tags.length > 0 && (
               <div className="mt-7 flex flex-wrap gap-2">
