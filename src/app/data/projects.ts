@@ -27,11 +27,6 @@ export const projects: Project[] = [
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/Marwahahaha/portfolio",
     liveUrl: "",
-    images: [
-      "/media/ironclad-logo.jpg",
-      "/media/deck-list.jpg",
-      "/media/battle-field.jpg",
-    ],
   },
   {
     title: "Ironclad Arena",
@@ -49,12 +44,12 @@ export const projects: Project[] = [
       "Ports & Adapters",
       "Game networking",
     ],
-    repoUrl: "https://github.com/your-username/ironclad-arena",
+    repoUrl: "https://github.com/howest-ti-sep/group-02-hearthstone-clone-client",
     thesisPdfUrl: "/documents/IroncladArena.pdf",
     images: [
-      "/media/projects/ironclad-arena.png",
-      "/media/projects/ironclad-arena-2.png",
-      "/media/projects/ironclad-arena-3.png",
+      "/media/ironclad-logo.jpg",
+      "/media/deck-list.jpg",
+      "/media/battle-field.jpg",
     ],
   },
   {
