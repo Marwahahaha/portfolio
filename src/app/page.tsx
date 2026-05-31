@@ -54,6 +54,7 @@ export default function Home() {
               fill
               priority
               className="object-cover"
+              style={{ objectPosition: "57% center" }}
             />
           </div>
         </div>

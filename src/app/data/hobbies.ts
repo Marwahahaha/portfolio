@@ -6,6 +6,15 @@ export const favouriteGames = [
             - Persona 5
             - NieR: Automata
             - Claire Obscur: Expedition 33`,
+        images: [
+            "/media/ff-vii.jpg",
+            "/media/ff-ix.jpg",
+            "/media/ff-x.jpg",
+            "/media/ff-xvi.jpg",
+            "/media/p5.png",
+            "/media/nier-automata.jpg",
+            "/media/e33.jpg",
+        ]
     },
     {
         title: "Strategy games",
@@ -13,6 +22,10 @@ export const favouriteGames = [
             `I like planning, experimenting with systems, and finding creative ways to solve complex situations. My go-to strategy games include:
             - Chess
             - Go`,
+        images: [
+            "/media/chess.jpg",
+            "/media/go.jpg",
+        ]
     },
     {
         title: "Survival horror games",
@@ -21,18 +34,15 @@ export const favouriteGames = [
             - Resident Evil 4
             - Resident Evil Requiem
             - Silent Hill`,
+        images: [
+            "/media/re4.jpg",
+            "/media/re-requiem.jpg",
+            "/media/silent-hill.jpg",
+        ]
     },
 ];
 
 export const sewingProjects = [
-    {
-        title: "Daily wear",
-        description:
-            "Clothes and pieces I can actually wear, which makes the process feel practical and rewarding.",
-        images: [
-            ""
-        ]
-    },
     {
         title: "Cosplay costumes",
         description:
@@ -49,6 +59,7 @@ export const sewingProjects = [
         images: [
             "/media/kumihimo.jpeg",
             "/media/lanyard-bracelets.jpeg",
+            "/media/ghibli_mug.jpg"
         ]
     },
 ];
